@@ -1,0 +1,24 @@
+<div class="section background-correct" style='background-image: url(assets/about.jpg)'>
+  <div class="section-filter">
+    <div class="section-block">
+      <h2 style="text-align: center;" class='lobster header-nomp header-text'>
+        {{title}}
+      </h2>
+      <div class="section-text">
+        <p *ngFor="let item of text">
+          {{item}}
+        </p>
+      </div>
+      <div class="section-text">
+        <ul class='list'>
+          <li *ngFor="let item of list">
+            {{item}}
+          </li>
+        </ul>
+      </div>
+      <h1 class='logotype small'>
+        AwesomeChoco
+      </h1>
+    </div>
+  </div>
+</div>

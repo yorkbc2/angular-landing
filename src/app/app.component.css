@@ -1,0 +1,12 @@
+footer {
+ text-align: center;
+}
+
+footer h2 {
+  font-size: 24px;
+  color: #000;
+  font-family: "Lobster Two", cursive;
+}
+footer h3 {
+  font-size: 14px;
+}

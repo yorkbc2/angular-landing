@@ -1,1 +1,223 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --header: "Lobster Two", cursive;
+  --text: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--text);
+  font-size: 1.123em;
+}
+
+.header-text {
+  font-family: var(--header);
+}
+
+.header-nomp {
+  margin: 0;
+  padding: 0;
+}
+
+.background-correct {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-correct.fixed {
+  background-attachment: fixed;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 1.15em;
+  font-family: var(--header);
+  transition: all 0.4s ease-in-out;
+}
+
+.button:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+}
+
+.section-filter {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 3%;
+}
+
+.section-block {
+  width: 90%;
+  min-height: 90vh;
+  margin: 5% 5%;
+  margin-top: 0;
+  background-color: rgba(0,0,0,0.8);
+  padding: 20px;
+}
+
+.section-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.little-line {
+  margin: 15px auto;
+  width: 240px;
+  height: 2px;
+  background-color: rgb(64, 32, 25);
+}
+
+.list li {
+  position: relative;
+  list-style:none;
+  margin: 10px 0;
+  margin-left: 10px;
+}
+
+.list li::after {
+  content: "";
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(assets/cookie.png);
+  top: 0px;
+  left: -40px;
+}
+
+.logotype {
+  display: block;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-family: var(--header);
+  width: 280px;
+}
+
+.logotype::after,
+.logotype::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 120px;
+  height: 2px;
+  top: calc(50% - 1px);
+}
+
+.logotype::after {
+  left: 100%;
+}
+
+.logotype::before {
+  right: 100%;
+}
+
+.logotype.small {
+  font-size: 1.8em;
+}
+
+.columns {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+}
+
+.column {
+  width: 50%;
+}
+
+.form {
+  display: block;
+  margin: 5px 20px;
+  padding: 0px 5px;
+  position: relative;
+}
+
+.form div {
+  margin: 10px 0;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.form div input {
+  width: 100%;
+  padding: 10px 10px;
+  border: 4px solid rgb(64,32,25);
+  border-radius: 0;
+  font-size: 0.912em;
+}
+
+.form div textarea {
+  width: 100%;
+  padding: 10px 10px;
+  border: 4px solid rgb(64,32,25);
+  border-radius: 0;
+  min-height: 120px;
+  resize: none;
+  font-size: 0.912em;
+}
+
+.form div textarea.error,
+.form div input.error {
+  border-color: red;
+}
+
+.button-s {
+  padding: 10px 30px;
+  color: #fff;
+  font-family: var(--header);
+  font-size: 0.98em;
+  background-color: rgb(62,32,25);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.error-message {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  padding: 5px 0 ;
+  text-align: center;
+  font-size: 0.819em;
+}
+
+.form-success {
+  text-align: center;
+}

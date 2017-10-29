@@ -1,0 +1,40 @@
+<div class="section background-correct" style="background-image: url(assets/products.jpg)">
+  <div class="section-filter">
+    <div class="products-block">
+      <div class='products-current'>
+        <div class="product-image animated" [style.background-image]="'url('+currentProduct.picture+')'">
+          <!-- <img [src]="currentProduct.picture" [alt]="'Image not found'" [title]="currentProduct.title"> -->
+        </div>
+        <div class="product-content">
+
+          <h2 class="product-title animated">
+            {{current().title}}
+          </h2>
+          <p class='animated'>
+            {{currentProduct.description}}
+          </p>
+          <div class="product-price animated">
+            <h2>
+              {{currentProduct.price}}
+            </h2>
+            <h3>
+              {{currentProduct.priceMethod}}
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="little-line"></div>
+      <div class="products-list">
+        <div class='product-list--item'
+        *ngFor="let item of products"
+        (click)="changeCurrentProduct(item.id)"
+        [title]="item.title"
+        [class]="item.id === currentProduct.id ? 'product-list--item active' : 'product-list--item'">
+          <figure class='product-item--image'>
+            <img [src]="item.picture" alt="Image not found!" [title]="item.title">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

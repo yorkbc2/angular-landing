@@ -1,0 +1,17 @@
+<header class="header background-correct" style='background-image: url(assets/header.jpg);'>
+  <div class="header-filter">
+    <div class="header-title">
+      <h1 class='header-text'>
+        {{title}}
+      </h1>
+    </div>
+    <div class="header-desc">
+    <p>{{description}}</p>
+    </div>
+    <div class="header-buttons">
+    <a class='button' target="_blank" *ngFor="let link of buttons" [href]="link.url">
+      {{link.label}}
+    </a>
+    </div>
+  </div>
+</header>

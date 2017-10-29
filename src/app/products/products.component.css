@@ -1,0 +1,124 @@
+.products-block {
+  width: 720px;
+  min-height: 50px;
+
+  background-color: #fff;
+  margin: 20px auto;
+  margin-bottom: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.products-current {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.products-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.product-list--item {
+  flex: 1;
+  text-align: center;
+}
+
+.product-list--item.active .product-item--image {
+  border: 2px solid rgb(64, 32, 25);
+}
+
+.product-item--image {
+  width: 125px;
+  height: 125px;
+
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.product-item--image img {
+  width: 100%;
+  height: auto;
+}
+
+.product-image {
+  width: 55%;
+  overflow: hidden;
+  max-height: 380px;
+  min-height:380px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*
+.product-image img {
+  width: auto;
+  height: 100%;
+}*/
+
+.product-content {
+  width: 40%;
+  padding: 15px 15px 5px 15px;
+  position: relative;
+  color: #000;
+}
+
+.product-price {
+  border-top: 2px solid rgb(64, 32, 25);
+  border-bottom: 2px solid rgb(64, 32, 25);
+  padding: 15px 20px;
+  font-size: 1.8em;
+  color: rgb(64, 32, 25);
+  text-align: center;
+}
+
+.product-price h2,
+.product-price h3 {
+  font-size: 1em;
+  display: inline-block;
+}
+
+.product-title {
+  font-family: var(--header);
+}

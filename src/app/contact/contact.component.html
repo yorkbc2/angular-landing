@@ -1,0 +1,63 @@
+<div class="section background-correct" style="background-image: url('assets/choco.jpg')">
+  <div class="section-filter">
+    <div class="section-block">
+      <h2 style="text-align: center;" class='lobster header-nomp header-text'>
+        {{title}}
+      </h2>
+      <div class="columns">
+        <div class="column contact-description">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid repellat cum eius ut neque minima nemo veritatis omnis dolorem possimus provident magni sapiente corporis rerum, mollitia earum debitis iusto dolore.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est adipisci, aspernatur, sapiente voluptatibus voluptate numquam cumque mollitia fugit tempora. Quas fugit alias laudantium, ipsum aspernatur illum magnam ab cupiditate perferendis.
+          </p>
+          <div class='contact-links'>
+            <a href="mailto: yorkbc2@gmail.com">Email: example.mail@gmail.com</a>
+
+            <a href="tel: +380123123123">Phone: +1 098 2442 13 21</a>
+
+            <a href="skype: example.skype">Skype: example.skype</a>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <form *ngIf="success == false" (ngSubmit)="submitForm($event)" class="form">
+            <div id='group-name'>
+              <input name='name' type="text" [(ngModel)]="user.name" placeholder="Enter your Name" id='input-name'>
+              <div class="error-message animated zoomIn" *ngIf="validation.name == false">
+                Name's length must be more then 1 and less then 24
+              </div>
+            </div>
+            <div id='group-email'>
+              <input name="email" [(ngModel)]="user.email" type="email" placeholder='Enter your Email' id='input-email'>
+              <div class="error-message animated zoomIn" *ngIf="validation.email == false">
+                Email's length must be more then 1 and less then 24
+              </div>
+            </div>
+            <div id='group-message'>
+              <textarea name="message" [(ngModel)]="user.message" placeholder="Enter your message here..." id='input-message'></textarea>
+              <div class="error-message animated zoomIn" *ngIf="validation.message == false">
+                Message's length must be more then 1 and less then 360
+              </div>
+            </div>
+            <div>
+              <button class='button-s'>
+                Send <i class="fa fa-paper-plane-o"></i>
+              </button>
+            </div>
+          </form>
+          <div class="form-success animated bounceIn" *ngIf="success == true">
+            <h2>
+              <img src="assets/check.png" width='125px' height='125px' alt="Виконано!">
+            </h2>
+            <p>
+              Thank you for a message. Please, wait for our response!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
